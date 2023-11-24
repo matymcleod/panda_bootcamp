@@ -16,10 +16,12 @@ function createUser(name, isAdmin, isYellow) {
   const user = {
     name,
     isAdmin,
-    isYellow
+    isYellow,
+    roles: ['labor']
   }
   return user;
 }
+// TEST: create user and check the output matches the input value
 console.log((createUser('user 1', false, true)))
 // 2) Declare a function called checkIfUserIsAdminAndYellow which takes a single argument, user. if the user is both admin AND yellow, log "user is both admin and yellow" to the console. Otherwise log out "user is not admin and yellow". This function should not return anything.
 // Hint: we haven't done and before. We've done stuff like if(user.isAdmin), but how do we check two things in one if statement?
@@ -37,6 +39,13 @@ checkIfUserIsAdminAndYellow(createUser('user 3', true, false))
 
 // 3) Declare a function: addRoleToUser. This function accepts two arguments: a user, and newRole, which should be a string. ie: "crane manager". This function should PUSH this newRole to the user's roles property, which is an array. Log out the user object after this to see their updated roles.
 // hint: Will require googling/AI bot. How to push to an array?
+
+function addRoleToUser(user, newRole) {
+  user.roles.push(newRole);
+  console.log(user)
+}
+// TEST: create user and modify user's roles which adds an additional role to the end of the roles array.
+addRoleToUser(createUser('user 4', true, true), 'crane manager')
 
 // BONUS: Declare a function: postMessage, just like I did in my tutorial video, execpt the fucntion has one additional argument. The function should take THREE arguments: user, text, and parentMessage. 
 
