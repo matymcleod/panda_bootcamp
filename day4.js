@@ -53,3 +53,40 @@ addRoleToUser(createUser('user 4', true, true), 'crane manager')
 // At the end of the postMessage function, return the object. 
 // Call the function and store the result in a variable. Then, log out that messge to the console.
 // HINT: the parentMessage property should be optional (because not every message has a parent). Which means you should add the property to the message object ONLY if the parentMessage was passed in.
+
+const adminUser = {
+  name: "admin",
+  isAdmin: true,
+  isYellow: false,
+  roles: ["admin", "yellow manager"]
+}
+
+// SET: create a message object for testing responseMessage function
+const testMessage = {
+  user: "test",
+  posts: "test message"
+}
+// SET: create a function that creates a message template
+function createMessage(user, text, likes){
+  const message = {
+    user,
+    text,
+    likes
+  }
+  return message;
+}
+// TEST: createMessage functions output
+console.log(createMessage('user 5', 'you are a god!', 5));
+// SET: create a response message function with args: user, text, parentMessage
+
+function responseMessage(user, text, parentMessage) {
+  const response = {
+    user,
+    text,
+    parentMessage
+  }
+  return response;
+}
+console.log("///////////////////////////////////////")
+// TEST: call and log the responseMessage function with an existing user and an existing message.
+console.log(responseMessage(adminUser, "I am a god!", testMessage))
