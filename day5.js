@@ -119,33 +119,49 @@ const fergie = {
 };
 
 const warrior = {
-  name: 'maty',
+  name: 'warrior',
   level: 1,
   health: 100,
+  damage: 20,
   class: 'warrior',
   getDamage: function() {
-    return ;
+    return this.damage;
   }
 };
 
 const warlock = {
-  name: 'oliver',
+  name: 'warlock',
   level: 1,
   health: 100,
   class: 'warlock',
   pets: [fergie, imp],
   getDamage: function(){
-    let totalDamage = 0;
+    let totalPetDamage = 0;
     for(let i = 0; i < this.pets.length; i++){
       const petDamage = this.pets[i];
-      totalDamage += petDamage.getDamage();
+      totalPetDamage += petDamage.getDamage();
     } 
-    return totalDamage;
+    return totalPetDamage;
   }
 };
 
 console.log("warlock damage => ", warlock.getDamage());
+console.log("warrior damage => ", warrior.getDamage());
 
 
 // 2) Declare a fight method that takes two arguments, both of them are characters.
 // Fight should get the damage from each character, and contain an if statement after that chooses the winner based on who has more damage, and then log out the winner's name
+
+function fight(character1, character2) {
+  const character1Damage = character1.getDamage();
+  const character2Damage = character2.getDamage();
+  if(character1Damage === character2Damage){
+    console.log(`nobody wins`);
+  } else if(character1Damage > character2Damage) {
+    console.log(character1.name, 'is the winner')
+  } else {
+    console.log(character2.name, 'is the winner')
+  }
+}
+
+fight(warrior, warlock)
