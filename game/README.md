@@ -1,0 +1,8 @@
+Day 7
+1) Create a new folder called game. (remember to cd into it if youre not in it in your terminal, to run node!)
+2) Create a mage.js. Create a Mage class, with a constructor that takes a name. Set this.name to name in the constructor. Export the class from the file.
+3) Create a game.js Import the Mage class using require, and create a new Mage with whatever name you want. Log it to the console.
+4) Do the same thing for 7 classes total: Warrior, Shaman, Warlock, Paladin, Mage, Gambler, and Medic. making sure your game.js uses all 7 files to create one (or more!) of each class.
+5) Create a pet.js file. Create a Pet class, with a constructor that types one parameter, name. Export Pet from the file.
+6) in Warlock and then Shaman, import the Pet class, and in the constructor function, set this.pets to an empty array. Then, create a new Pet, then push it to the array. These classes start with a pet when they are made! 
+Next lesson is Sunday, was going to do tomorrow but this gives some people time to catch up too and practice previous for loops and shit
