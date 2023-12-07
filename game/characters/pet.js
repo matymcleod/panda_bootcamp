@@ -1,7 +1,7 @@
-class Warrior {
+class Pet {
   constructor(name) {
     this.name = name;
   }
 }
 
-module.exports = Warrior;
+module.exports = Pet;

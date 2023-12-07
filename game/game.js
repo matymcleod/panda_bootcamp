@@ -1,9 +1,13 @@
-const Warrior = require("./warrior");
-const Warlock = require("./warlock");
-const Demon = require("./demon");
-const Imp = require("./imp");
-const Mage = require("./mage");
+const Shaman = require("./characters/shaman");
+const Warlock = require("./characters/warlock");
+const Mage = require("./characters/mage");
+
+
+const shaman = new Shaman("Shaman 1");
+console.log(shaman);
+
+const warlock = new Warlock("Warlock 1");
+console.log(warlock);
 
 const mage = new Mage("matyMage");
-
 console.log(mage);
