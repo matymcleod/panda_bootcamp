@@ -1,13 +1,14 @@
 class Character {
-  constructor(name) {
+  constructor(name, className, attack, magic, defense, speed, health, mana) {
     this.name = name;
     this.level = 1;
-    this.attack = 1;
-    this.magic = 1;
-    this.defense = 1;
-    this.speed = 1;
-    this.health = 1;
-    this.mana = 1;
+    this.className = className;
+    this.attack = attack;
+    this.magic = magic;
+    this.defense = defense;
+    this.speed = speed;
+    this.health = health;
+    this.mana = mana;
   }
 }
 

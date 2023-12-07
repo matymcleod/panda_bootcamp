@@ -10,8 +10,8 @@ Next lesson is Sunday, was going to do tomorrow but this gives some people time 
 3 days to do homework, next lecture Wednesday 6PM
 Day 7 Homework:
 1) ~Delete all but 3 of your character classes - you pick which 3 you want to keep! Update game.js accordinly, to remove your deleted characters~
-2) Restructure your game. Your game should have a characters folder where your characters reside. 
-3) Implement a base Character class that takes the following constructor arguments: name, className, attack, magic, defense, speed, health, mana, and sets them on the character.
+2) ~Restructure your game. Your game should have a characters folder where your characters reside.~ 
+3) ~Implement a base Character class that takes the following constructor arguments: name, className, attack, magic, defense, speed, health, mana, and sets them on the character.~
 4) The character initializer should also initialize an empty array of weapons, pets, and spells.
 5) The 3 classes you use should now inherit from the Character class, usign the class {className} extends Character syntax.
 6) Create a spells folder, and a Spell class, with a constructor that takes the following arguments: name, power, mana, and sets them on the spell.
