@@ -9,6 +9,9 @@ class Character {
     this.speed = speed;
     this.health = health;
     this.mana = mana;
+    this.weapons = [];
+    this.pets = [];
+    this.spells = [];
   }
 }
 
