@@ -3,11 +3,11 @@ const Warlock = require("./characters/warlock");
 const Mage = require("./characters/mage");
 
 
-const shaman = new Shaman("Shaman 1");
+const shaman = new Shaman("shaman");
 console.log(shaman);
 
-const warlock = new Warlock("Warlock 1");
+const warlock = new Warlock("warlock");
 console.log(warlock);
 
-const mage = new Mage("matyMage");
+const mage = new Mage("mage");
 console.log(mage);
