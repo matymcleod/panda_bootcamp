@@ -18,9 +18,9 @@ Day 7 Homework:
 
 6) Create a spells folder, and a Spell class, with a constructor that takes the following arguments: name, power, mana, and sets them on the spell.
 
-7) Create a specific spell in a separate file: ie: fireball.js, and export that spell from the file.
+7) ~Create a specific spell in a separate file: ie: fireball.js, and export that spell from the file.~
 
-8) In one of your characters, give them the spell in the constructor.
+8) ~ In one of your characters, give them the spell in the constructor. ~
 
 9) Do steps 6 through 8 for weapons.
 
