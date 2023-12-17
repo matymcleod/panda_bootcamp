@@ -10,8 +10,8 @@ class Character {
     this.health = health;
     this.mana = mana;
     this.weapons = [];
-    this.pets = [];
     this.spells = [];
+    this.activePet = null;
   }
   levelUp() {
     this.level = this.level + 1;
@@ -30,7 +30,14 @@ class Character {
     } 
   }
   getDamage() {
-    
+
+  }
+
+  summonPet(petName) {
+    // check if the string passed into this function call has a pet with a matching name.
+    for(i =0; i < this.pets.length; i++) {
+      const pet =
+    }
   }
 }
 

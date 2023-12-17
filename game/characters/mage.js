@@ -8,6 +8,8 @@ class Mage extends Character {
     this.name = name;
     this.spell = Lag;
     this.weapon = Knife;
+    this.doggy = new Pet("doggy", 10);
+    this.pets.push(doggy);
   }
 }
 

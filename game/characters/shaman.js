@@ -3,10 +3,10 @@ const Character = require("./character");
 
 class Shaman extends Character{
   constructor(name) {
-    super(name, "Shaman", 1, 2, 3, 4, 5,6);
+    super(name, "Shaman", 1, 2, 3, 4, 5, 6);
     this.name = name;
     this.pets = [];
-    const kitty = new Pet("dusty");
+    const kitty = new Pet("kitty", 5);
     this.pets.push(kitty);
   }
 }
