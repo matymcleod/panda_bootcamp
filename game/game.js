@@ -14,3 +14,6 @@ console.log('TEST::: mage :::', mage);
 
 // const spell = new Spell("test", 5, 6);
 // console.log('TEST::: spell :::', spell);
+
+mage.levelUp();
+console.log('TEST::: mage :::', mage);

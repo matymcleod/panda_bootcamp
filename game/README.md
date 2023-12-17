@@ -16,15 +16,15 @@ Day 7 Homework:
 
 5) ~The 3 classes you use should now inherit from the Character class, usign the class {className} extends Character syntax.~
 
-6) Create a spells folder, and a Spell class, with a constructor that takes the following arguments: name, power, mana, and sets them on the spell.
+6) ~Create a spells folder, and a Spell class, with a constructor that takes the following arguments: name, power, mana, and sets them on the spell.~
 
 7) ~Create a specific spell in a separate file: ie: fireball.js, and export that spell from the file.~
 
 8) ~ In one of your characters, give them the spell in the constructor. ~
 
-9) Do steps 6 through 8 for weapons.
+9) ~Do steps 6 through 8 for weapons.~
 
-10) Implement a levelUp function in the Character class that bumps up the characters level, and then stats depending on which character class is being levelled up.
+10) ~Implement a levelUp function in the Character class that bumps up the characters level, and then stats depending on which character class is being levelled up.~
 
 11) Implement a getDamage function in the Character class according to the following spec:
 - If a character has an activePet, we take the activePet's damage as starting value, and add it to the character's magic damage.
