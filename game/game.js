@@ -10,7 +10,7 @@ const Spell = require("./spells/spell");
 // console.log('TEST::: warlock :::', warlock);
 
 const mage = new Mage("mage");
-console.log('TEST::: mage :::', mage);
+console.log('TEST 0 --- mage ---', mage);
 
 // const spell = new Spell("test", 5, 6);
 // console.log('TEST::: spell :::', spell);
@@ -23,3 +23,6 @@ console.log('TEST 2 ::: mage.summonPet :::', mage);
 
 mage.getAttack();
 console.log('TEST 3 ::: mage.getAttack :::', mage);
+
+mage.castSpell("lag");
+console.log('TEST 4 ::: mage.castSpell :::', mage);
