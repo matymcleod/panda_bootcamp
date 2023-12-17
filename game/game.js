@@ -16,4 +16,10 @@ console.log('TEST::: mage :::', mage);
 // console.log('TEST::: spell :::', spell);
 
 mage.levelUp();
-console.log('TEST::: mage :::', mage);
+console.log('TEST 1 ::: mage.levelUp :::', mage);
+
+mage.summonPet("doggy");
+console.log('TEST 2 ::: mage.summonPet :::', mage);
+
+mage.getAttack();
+console.log('TEST 3 ::: mage.getAttack :::', mage);

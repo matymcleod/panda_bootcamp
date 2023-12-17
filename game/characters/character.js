@@ -29,14 +29,22 @@ class Character {
       this.mana = this.mana + 26;
     } 
   }
-  getDamage() {
-
-  }
 
   summonPet(petName) {
     // check if the string passed into this function call has a pet with a matching name.
-    for(i =0; i < this.pets.length; i++) {
-      const pet =
+    for(let i =0; i < this.pets.length; i++) {
+      const pet = this.pets[i];
+      if(petName === pet.name) {
+        this.activePet = pet;
+      }
+    }
+  }
+
+  getAttack() {
+    if(this.activePet !== null) {
+      return this.attack = this.attack + this.activePet.attack;
+    } else {
+      return this.damage;
     }
   }
 }
