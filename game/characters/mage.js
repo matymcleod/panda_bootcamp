@@ -8,14 +8,16 @@ class Mage extends Character {
     super(name, "Mage", 2, 4, 6,  8, 10, 12);
     this.pets = [];
     
+    const doggy = new Pet("doggy", 10);
+    this.pets.push(doggy);
+   
     const lag = new Lag("lag");
     this.spells.push(lag);
 
     const knife = new Knife("knife");
     this.weapons.push(knife);
     
-    const doggy = new Pet("doggy", 10);
-    this.pets.push(doggy);
+
   }
 }
 

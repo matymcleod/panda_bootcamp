@@ -34,7 +34,7 @@ Day 7 Homework:
 
 HINT: All of this is implemented in my github repo for reference
 
-11) Get familiar with git! Create new github repo on your account, and follow the new repo instructions to push! Make sure you toggle to SSH and not HTTPS on that page.
+12) Get familiar with git! Create new github repo on your account, and follow the new repo instructions to push! Make sure you toggle to SSH and not HTTPS on that page.
 YOu will need to create an SSH key to authenticate your PC with git. https://www.inmotionhosting.com/support/server/ssh/how-to-add-ssh-keys-to-your-github-account/ this is good isntructions.
 
 Push your game repo up to git! All homework should be completed via git from now on.

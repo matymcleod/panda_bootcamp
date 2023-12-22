@@ -43,17 +43,22 @@ class Character {
     for(let i = 0; i < this.spells.length; i++) {
       const spell = this.spells[i];
       if(spellName === spell.name) {
-        this.attack = this.attack + spell.power
+        return this.attack + spell.power
       }
     }
+  }
 
+  equippedWeapon(weapon) {
+    if(this.weapons){
+
+    }
   }
 
   getAttack() {
     if(this.activePet !== null) {
       return this.attack = this.attack + this.activePet.attack;
     } else {
-      return this.damage;
+      return this.attack + this.weapons;
     }
   }
 }
