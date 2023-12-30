@@ -1,3 +1,4 @@
+const pistol = require("../weapons/pistol");
 class Character {
   constructor(name, className, attack, defense, speed, health, mana) {
     this.name = name;
@@ -48,19 +49,31 @@ class Character {
     }
   }
 
-  equippedWeapon(weapon) {
-    if(this.weapons){
-
+  equippedWeapon(weaponName) {
+    for(let i =0; i < this.weapons.length; i++) {
+      const weapon = this.weapons[i];
+      if(weaponName === weapon.name) {
+        this.weapon.push(weapon)
+      }
     }
   }
-
-  getAttack() {
-    if(this.activePet !== null) {
-      return this.attack = this.attack + this.activePet.attack;
-    } else {
-      return this.attack + this.weapons;
+  
+  getAttack(spellName){
+    for(let i = 0; i < this.spells.length; i++) {
+      const spell = this.spells[i];
+      if(spellName === spell.name) {
+        return this.attack + spell.power
+      }
+      if(!spell) {
+        return 0;
+      }
     }
-  }
+      if(this.activePet !== null) {
+        return this.attack = this.attack + this.activePet.attack;
+      } else {
+        return this.attack + this.weapons;
+      }
+    }
 }
 
 module.exports = Character;
