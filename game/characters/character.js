@@ -59,17 +59,21 @@ class Character {
   }
   
   getAttack(spellName){
+    // checking if there is a matching spellName this characters spells array
     for(let i = 0; i < this.spells.length; i++) {
       const spell = this.spells[i];
+      // if there is a spell in the spells array that matches what was passed in, set the spell to be saved as the matching arg.
       if(spellName === spell.name) {
         return this.attack + spell.power
       }
+      // if no match return 0
       if(!spell) {
         return 0;
       }
-    }
+    } // if there is an active pet, add the active pets attack to this characters attack
       if(this.activePet) {
-        return this.attack = this.attack + this.activePet.attack;
+        const petAttack = this.pet.attack;
+        return petAttack + this.attack;
       } else {
         return this.attack + this.weapons;
       }
