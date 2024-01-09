@@ -1,4 +1,3 @@
-const pistol = require("../weapons/pistol");
 class Character {
   constructor(name, className, attack, defense, speed, health, mana) {
     this.name = name;
@@ -72,7 +71,7 @@ class Character {
       if(!spell) {
         return 0;
       } else if(this.activePet) {
-        const petAttack = this.pet.attack;
+        const petAttack = this.pets.attack;
         return petAttack + this.attack;
         // if there is an eqquipped weapon, add its power to this character attack value
       } else if(this.equippedWeapon){
