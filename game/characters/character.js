@@ -41,6 +41,7 @@ class Character {
   }
 
   castSpell(spellName){
+    // check to see if this character has a spell that matches the value that is being passed in, if so, add the spells power to this character attack value
     for(let i = 0; i < this.spells.length; i++) {
       const spell = this.spells[i];
       if(spellName === spell.name) {
@@ -48,12 +49,13 @@ class Character {
       }
     }
   }
-
-  equippedWeapon(weaponName) {
+  
+  equipWeapon(weaponName) {
+    // check to see if this character has a weapon that matches the value that is being passed in, if so, set equippedWeapon to that value
     for(let i =0; i < this.weapons.length; i++) {
       const weapon = this.weapons[i];
-      if(weaponName === weapon.name) {
-        this.weapon.push(weapon)
+      if(weapon.name === weaponName) {
+        this.equippedWeapon = weapon;
       }
     }
   }
@@ -61,23 +63,24 @@ class Character {
   getAttack(spellName){
     // checking if there is a matching spellName this characters spells array
     for(let i = 0; i < this.spells.length; i++) {
-      const spell = this.spells[i];
       // if there is a spell in the spells array that matches what was passed in, set the spell to be saved as the matching arg.
+      const spell = this.spells[i];
       if(spellName === spell.name) {
-        return this.attack + spell.power
+        return this.defense + spell.power
       }
       // if no match return 0
       if(!spell) {
         return 0;
-      }
-    } // if there is an active pet, add the active pets attack to this characters attack
-      if(this.activePet) {
+      } else if(this.activePet) {
         const petAttack = this.pet.attack;
         return petAttack + this.attack;
-      } else {
-        return this.attack + this.weapons;
+        // if there is an eqquipped weapon, add its power to this character attack value
+      } else if(this.equippedWeapon){
+        const weaponPower = this.equippedWeapon.power;
+        return this.attack + weaponPower;
       }
-    }
+    } 
+  }
 }
 
 module.exports = Character;
