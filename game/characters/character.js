@@ -68,7 +68,7 @@ class Character {
         return 0;
       }
     }
-      if(this.activePet !== null) {
+      if(this.activePet) {
         return this.attack = this.attack + this.activePet.attack;
       } else {
         return this.attack + this.weapons;
