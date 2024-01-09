@@ -7,7 +7,7 @@ Day 6
 6) in Warlock and then Shaman, import the Pet class, and in the constructor function, set this.pets to an empty array. Then, create a new Pet, then push it to the array. These classes start with a pet when they are made! 
 Next lesson is Sunday, was going to do tomorrow but this gives some people time to catch up too and practice previous for loops and shit
 
-3 days to do homework, next lecture Wednesday 6PM
+
 Day 7 Homework:
 1) ~Delete all but 3 of your character classes - you pick which 3 you want to keep! Update game.js accordinly, to remove your deleted characters~
 2) ~Restructure your game. Your game should have a characters folder where your characters reside.~ 
