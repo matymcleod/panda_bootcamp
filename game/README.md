@@ -26,7 +26,7 @@ Day 7 Homework:
 
 10) ~Implement a levelUp function in the Character class that bumps up the characters level, and then stats depending on which character class is being levelled up.~
 
-11) ~Implement a getDamage function in the Character class according to the following spec:
-- If a character has an activePet, we take the activePet's damage as starting value, and add it to the character's magic damage.
-- If a character is casting a spell, we take the spell's damage and add it to the character's magic damage.
-- If a character has neither an activePet, nor a spell, we take their weapon's damage (if they have an equipped one, if not, use 0), and add it to the character's attack damage.~
+11) Implement a getDamage function in the Character class according to the following spec:
+- ~If a character has an activePet, we take the activePet's damage as starting value, and add it to the character's magic damage.~
+- ~If a character is casting a spell, we take the spell's damage and add it to the character's magic damage.~
+- ~If a character has neither an activePet, nor a spell, we take their weapon's damage (if they have an equipped one, if not, use 0), and add it to the character's attack damage.~
