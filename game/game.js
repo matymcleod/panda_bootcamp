@@ -23,5 +23,6 @@ console.log('TEST 2 ::: mage.summonPet :::', mage);
 
 mage.getAttack("lag");
 console.log('TEST 3 ::: mage.getAttack :::', mage);
-// mage.castSpell("lag");
-// console.log('TEST 4 ::: mage.castSpell :::', mage);
+
+mage.castSpell("lag");
+console.log('TEST 4 ::: mage.castSpell :::', mage);
