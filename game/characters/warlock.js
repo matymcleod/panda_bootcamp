@@ -11,8 +11,8 @@ class Warlock extends Character{
     const nikki = new Pet("nikki", 10);
     this.pets.push(nikki);
 
-    // const stun = new Stun("stun")
-    // this.spells.push(stun);
+    const stun = new Stun("stun")
+    this.spells.push(stun);
 
     const sword = new Sword("sword");
     this.weapons.push(sword);
