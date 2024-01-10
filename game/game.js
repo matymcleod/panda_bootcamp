@@ -2,12 +2,15 @@ const Shaman = require("./characters/shaman");
 const Warlock = require("./characters/warlock");
 const Mage = require("./characters/mage");
 const Spell = require("./spells/spell");
+const mobs = require("./mobs/mobs");
 const prompt = require("prompt-promise");
 
 async function gameLoop() {
   let character;
+  let mob = mobs[0];
   const classChoice = await prompt("Select a character: mage, shaman or warlock")
   console.log(`You selected ${classChoice}`);
+  
   switch(classChoice) { 
     case "mage":
     character = new Mage("Player");
