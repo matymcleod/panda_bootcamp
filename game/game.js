@@ -29,8 +29,8 @@ warlock.summonPet('nikki');
 // console.log('TEST ::: mage.summonPet :::', mage);
 
 mage.equipWeapon("knife");
-shaman.equipWeapon("knife");
-warlock.equipWeapon("knife");
+shaman.equipWeapon("pistol");
+warlock.equipWeapon("sword");
 // console.log('TEST ::: equip knife ::: ', shaman.equippedWeapon);
 
 mage.getDamage();
