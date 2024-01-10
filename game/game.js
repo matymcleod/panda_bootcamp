@@ -5,18 +5,18 @@ const Spell = require("./spells/spell");
 const prompt = require("prompt-promise");
 
 // Mage tests
-const mage = new Mage("mage");
-console.log('TEST ((( mage DEFAULT )))');
-console.log(mage);
-mage.levelUp();
-console.log('TEST ((( mage.levelUp )))', mage.level);
-mage.summonPet("dusty");
-console.log('TEST ((( mage.summonPet )))', mage.activePet);
-mage.equipWeapon("knife");
-console.log('TEST ((( mage.equipWeapon )))', mage.equippedWeapon);
-mage.getDamage();
-console.log('TEST ((( mage.getDamage )))');
-console.log(mage);
+// const mage = new Mage("mage");
+// console.log('TEST ((( mage DEFAULT )))');
+// console.log(mage);
+// mage.levelUp();
+// console.log('TEST ((( mage.levelUp )))', mage.level);
+// mage.summonPet("dusty");
+// console.log('TEST ((( mage.summonPet )))', mage.activePet);
+// mage.equipWeapon("knife");
+// console.log('TEST ((( mage.equipWeapon )))', mage.equippedWeapon);
+// mage.getDamage();
+// console.log('TEST ((( mage.getDamage )))');
+// console.log(mage);
 
 // Shaman tests
 // const shaman = new Shaman("shaman");
