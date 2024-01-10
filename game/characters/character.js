@@ -60,13 +60,14 @@ class Character {
       // if no match return 0
       if(!spell) {
         return 0;
-      } else if(this.activePet) {
-        const petAttack = this.pets.attack;
-        return petAttack + this.attack;
+      } 
+      else if(this.activePet) {
+        const petAttack = this.activePet.attack;
+        return this.attack += petAttack;
         // if there is an eqquipped weapon, add its power to this character attack value
       } else if(this.equippedWeapon){
         const weaponPower = this.equippedWeapon.power;
-        return this.attack + weaponPower;
+        return this.attack += weaponPower;
       }
     } 
   }
