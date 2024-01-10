@@ -11,13 +11,13 @@ const prompt = require("prompt-promise");
 // console.log('TEST::: warlock :::', warlock);
 
 const mage = new Mage("mage");
-console.log('TEST ::: mage DEFAULT ::: TEST ', mage);
+console.log('TEST ((( mage DEFAULT )))', mage);
 
 const shaman = new Shaman("shaman");
-console.log('TEST ::: shaman DEFAULT ::: TEST ', shaman);
+console.log('TEST ((( shaman DEFAULT )))', shaman);
 
 const warlock = new Warlock("warlock");
-console.log('TEST ::: warlock DEFAULT ::: TEST ', warlock);
+console.log('TEST ((( warlock DEFAULT )))', warlock);
 // const spell = new Spell("test", 5, 6);
 // console.log('TEST ::: spell :::', spell);
 
@@ -36,6 +36,6 @@ warlock.equipWeapon("sword");
 mage.getDamage();
 shaman.getDamage();
 warlock.getDamage();
-console.log('TEST ::: mage.getDamage ::: TEST ', mage);
-console.log('TEST ::: shaman.getDamage ::: TEST ', shaman);
-console.log('TEST::: warlock.getDamage ::: TEST ', warlock);
+console.log('TEST ((( mage.getDamage )))', mage);
+console.log('TEST ((( shaman.getDamage )))', shaman);
+console.log('TEST ((( warlock.getDamage )))', warlock);
