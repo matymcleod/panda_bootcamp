@@ -1,21 +1,4 @@
 {
-  "name": "panda_bootcamp",
-  "version": "1.0.0",
-  "description": "",
-  "main": "game",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/matymcleod/panda_bootcamp.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/matymcleod/panda_bootcamp/issues"
-  },
-  "homepage": "https://github.com/matymcleod/panda_bootcamp#readme",
   "dependencies": {
     "prompt-promise": "^1.0.3"
   }
