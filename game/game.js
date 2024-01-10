@@ -8,8 +8,8 @@ const prompt = require("prompt-promise");
 async function gameLoop() {
   let character;
   let mob = mobs[0];
-  const classChoice = await prompt("Select a character: mage, shaman or warlock")
-  console.log(`You selected ${classChoice}`);
+  const classChoice = await prompt("Select a character: mage, shaman or warlock \n")
+  console.log(`You selected ((( ${classChoice} )))`);
   
   switch(classChoice) { 
     case "mage":
@@ -27,7 +27,7 @@ async function gameLoop() {
     console.log(character);
     break;
     
-    default: console.log(`PLEASE CHOOSE A VALID CHARACTER(must be lower case)`);
+    default: console.log(`PLEASE CHOOSE A VALID CHARACTER(must be lower case). \nGame Over Loser. \nPress 'control' + 'D' to exit the game.`);
   }
 }
 
