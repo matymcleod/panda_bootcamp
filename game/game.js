@@ -18,11 +18,11 @@ console.log('TEST ::: mage :::', mage);
 
 // mage.levelUp();
 // console.log('TEST ::: mage.levelUp :::', mage);
-
-console.log('TEST ::: mage.summonPet :::', mage);
+mage.summonPet('doggy');
+// console.log('TEST ::: mage.summonPet :::', mage);
 
 mage.equipWeapon("knife");
-console.log('TEST ::: equip knife ::: ', mage.equippedWeapon);
+// console.log('TEST ::: equip knife ::: ', mage.equippedWeapon);
 
 mage.getDamage();
 console.log('TEST ::: mage.getDamage :::', mage);
