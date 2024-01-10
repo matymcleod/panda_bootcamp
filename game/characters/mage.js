@@ -5,16 +5,16 @@ const Pet = require("./pet");
 
 class Mage extends Character {
   constructor(name) {
-    super(name, "Mage", 2, 4, 6,  8, 10, 12);
+    super(name, "mage", 2, 4, 6,  100, 10);
     this.pets = [];
     
-    const doggy = new Pet("doggy", 10);
-    this.pets.push(doggy);
+    const dusty = new Pet("dusty", 10);
+    this.pets.push(dusty);
    
     const lag = new Lag("lag");
     this.spells.push(lag);
 
-    const knife = new Knife("knife");
+    const knife = new Knife("knife", 40);
     this.weapons.push(knife);
     
 

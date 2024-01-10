@@ -1,13 +1,22 @@
 const Pet = require("./pet");
 const Character = require("./character");
+const Phase = require("../spells/phase");
+const Pistol = require("../weapons/pistol");
 
 class Shaman extends Character{
   constructor(name) {
-    super(name, "Shaman", 1, 2, 3, 4, 5, 6);
+    super(name, "shaman", 1, 2, 3, 100, 6);
     this.name = name;
     this.pets = [];
-    const kitty = new Pet("kitty", 5);
-    this.pets.push(kitty);
+    // shaman defaults with: pet, spell and weapon
+    const sophie = new Pet("sophie", 5);
+    this.pets.push(sophie);
+
+    const phase = new Phase("phase");
+    this.spells.push(phase);
+
+    const pistol = new Pistol("pistol");
+    this.weapons.push(pistol);
   }
 }
 
