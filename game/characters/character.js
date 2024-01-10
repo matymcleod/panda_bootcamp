@@ -38,16 +38,6 @@ class Character {
       }
     }
   }
-
-  castSpell(spellName){
-    // check to see if this character has a spell that matches the value that is being passed in, if so, add the spells power to this character attack value
-    for(let i = 0; i < this.spells.length; i++) {
-      const spell = this.spells[i];
-      if(spellName === spell.name) {
-        return this.attack + spell.power
-      }
-    }
-  }
   
   equipWeapon(weaponName) {
     // check to see if this character has a weapon that matches the value that is being passed in, if so, set equippedWeapon to that value
@@ -59,7 +49,7 @@ class Character {
     }
   }
   
-  getAttack(spellName){
+  getDamage(spellName){
     // checking if there is a matching spellName this characters spells array
     for(let i = 0; i < this.spells.length; i++) {
       // if there is a spell in the spells array that matches what was passed in, set the spell to be saved as the matching arg.
