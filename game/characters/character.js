@@ -13,19 +13,19 @@ class Character {
     this.activePet = null;
   }
   levelUp() {
-    this.level = this.level + 1;
-    if(this.className === "Mage") {
-      this.attack = this.attack + 1;
-      this.health = this.health + 50;
-      this.mana = this.mana + 25;
-    } else if(this.className === "Shaman") {
-      this.attack = this.attack + 2;
-      this.health = this.health + 50;
-      this.mana = this.mana +24;
-    } else if(this.className === "Warlock") {
-      this.attack = this.attack + 3;
-      this.health = this.health + 50;
-      this.mana = this.mana + 26;
+    this.level += 1;
+    if(this.className === "mage") {
+      this.attack += 1;
+      this.health += 50;
+      this.defense += 25;
+    } else if(this.className === "shaman") {
+      this.attack += 2;
+      this.health += 50;
+      this.defense += 24;
+    } else if(this.className === "warlock") {
+      this.attack += 3;
+      this.health += 50;
+      this.defense += 26;
     } 
   }
 

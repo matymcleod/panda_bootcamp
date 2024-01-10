@@ -4,38 +4,34 @@ const Mage = require("./characters/mage");
 const Spell = require("./spells/spell");
 const prompt = require("prompt-promise");
 
-// const shaman = new Shaman("shaman");
-// console.log('TEST::: shaman :::', shaman);
-
-// const warlock = new Warlock("warlock");
-// console.log('TEST::: warlock :::', warlock);
-
+// Mage tests
 const mage = new Mage("mage");
 console.log('TEST ((( mage DEFAULT )))', mage);
 
-const shaman = new Shaman("shaman");
-console.log('TEST ((( shaman DEFAULT )))', shaman);
+mage.levelUp();
+console.log('TEST ((( mage.levelUp )))', mage.level);
 
-const warlock = new Warlock("warlock");
-console.log('TEST ((( warlock DEFAULT )))', warlock);
-// const spell = new Spell("test", 5, 6);
-// console.log('TEST ::: spell :::', spell);
-
-// mage.levelUp();
-// console.log('TEST ::: mage.levelUp :::', mage);
-mage.summonPet('dusty');
-shaman.summonPet('sophie');
-warlock.summonPet('nikki');
-// console.log('TEST ::: mage.summonPet :::', mage);
+mage.summonPet("dusty");
+console.log('TEST ((( mage.summonPet )))', mage.activePet);
 
 mage.equipWeapon("knife");
-shaman.equipWeapon("pistol");
-warlock.equipWeapon("sword");
-// console.log('TEST ::: equip knife ::: ', shaman.equippedWeapon);
+console.log('TEST ((( mage.equipWeapon )))', mage.equippedWeapon);
 
 mage.getDamage();
-shaman.getDamage();
-warlock.getDamage();
 console.log('TEST ((( mage.getDamage )))', mage);
-console.log('TEST ((( shaman.getDamage )))', shaman);
-console.log('TEST ((( warlock.getDamage )))', warlock);
+
+// Shaman tests
+// const shaman = new Shaman("shaman");
+// console.log('TEST ((( shaman DEFAULT )))', shaman);
+// shaman.levelUp();
+// console.log('TEST ((( shaman.levelUp )))', shaman);
+// shaman.getDamage();
+// console.log('TEST ((( shaman.getDamage )))', shaman);
+
+// // Warlock tests
+// const warlock = new Warlock("warlock");
+// console.log('TEST ((( warlock DEFAULT )))', warlock);
+// warlock.levelUp();
+// console.log('TEST ((( warlock.levelUp )))', warlock);
+// warlock.getDamage();
+// console.log('TEST ((( warlock.getDamage )))', warlock);
