@@ -32,11 +32,11 @@ Day 7 Homework:
 - ~If a character has neither an activePet, nor a spell, we take their weapon's damage (if they have an equipped one, if not, use 0), and add it to the character's attack damage.~
 
 Day 8 Homework
-1) ~Create a mobs folder, mobs class, and some mobs, as well as a mobs array that stores all your mobs.
+1) ~Create a mobs folder, mobs class, and some mobs, as well as a mobs array that stores all your mobs.~
 
-2) ~run npm init to initialize your repository, and npm install --save prompt-promise to install the prompt package.
+2) ~run npm init to initialize your repository, and npm install --save prompt-promise to install the prompt package.~
 
-3) ~in game.js, you can require the prompt-promise package the same way you require local stuff! const prompt = require("prompt-promise")
+3) ~in game.js, you can require the prompt-promise package the same way you require local stuff! const prompt = require("prompt-promise")~
 
 4) Create a fun game loop! The world is your oyster.
 BARE MINIMUM:
