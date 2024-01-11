@@ -40,7 +40,7 @@ Day 8 Homework
 
 4) Create a fun game loop! The world is your oyster.
 BARE MINIMUM:
-- Choose a class, instantiate your character based on that class. Throw an error if that class is not available.
+- ~Choose a class, instantiate your character based on that class. Throw an error if that class is not available.~
 - Select random mobs to fight, in a "turn based" fighting system.
 - Offer the ability to attack, equip weapon, summon pet, or cast a spell each turn.
 - Level up after a mob is defeated, or game over if you are defeated.
