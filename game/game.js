@@ -11,30 +11,44 @@ async function gameLoop() {
   let mob = mobs[0];
 
   const classChoice = await prompt("Select a character: mage, shaman or warlock \n")
-  console.log(`You selected ((( ${classChoice} )))`);
 
   switch(classChoice) { 
     case "mage":
-    character = new Mage("mage");
+    character = new Mage("MAGE");
     break;
     case "shaman":
-    character = new Shaman("shaman");
+    character = new Shaman("SHAMAN");
     break;
     case "warlock":
-    character = new Warlock("warlock");
+    character = new Warlock("WARLOCK");
     break;
     default: console.log(`PLEASE CHOOSE A VALID CHARACTER(must be lower case). \nGame Over. \nPress 'control' + 'D' to exit the game.`);
   }
+  console.log(`You have selected ((( ${character.name} ))) \nHealth = ${character.health}\nStrength = ${character.getDamage()}\nLevel = ${character.level}`);
+  console.log(`You are now fighting <<< ${mob.name} >>>\nHealth = ${mob.health} \nAttack = ${mob.attack}`);
 
-  console.log(`You are now fighting ${mob.name} \nHealth = ${mob.health} \nAttack = ${mob.attack}`);
-
-  if(mob.health < 0 && mob.name === "badgay"){
-    console.log(`congrats! you defeated ${mob.name}`)
-    mob.slice()
-    console.log(`You are now fighting ${mob.name}`);
+  
+  while((character.health > 0) && (mob.health > 0)) {
+    console.log(`((( ${character.name} SPELLS )))`)
+    console.log(character.spells)
+    const move = await prompt(`${character.name}!!!\nCast a spell to begin the game\n`)
+    
+    const damage = character.getDamage(move);
+    console.log(`${character.name} STATS\nHEALTH = ${character.health}\nDAMAGE = ${damage}`)
+    
+    mob.health -= damage;
+    const mobAttack = mob.attack;
+    console.log(`${mob.name} STATS\nHEALTH = ${mob.health}\nDamage = ${mobAttack}`)
+    
+    if((mob.health < 0) && (mob.name === "badgay")){
+      console.log(`YAY! you defeated ${mob.name}`)
+      mob.slice()
+      console.log(`You are now fighting ${mob.name}`);
+    }
+    
   }
-  // while((character.health > 0) && (mob.health > 0)) {
-
-  // }
+  const gameOver = "GAME OVER";
+  console.log(`${gameOver}\npress ctrl+d to exit`)
+  return;
 }
 gameLoop();
