@@ -17,19 +17,16 @@ async function gameLoop() {
     case "mage":
     character = new Mage("mage");
     break;
-
     case "shaman":
     character = new Shaman("shaman");
     break;
-
     case "warlock":
     character = new Warlock("warlock");
     break;
-    
     default: console.log(`PLEASE CHOOSE A VALID CHARACTER(must be lower case). \nGame Over. \nPress 'control' + 'D' to exit the game.`);
   }
 
-  console.log(`You are now fighting ${mob.name}`);
+  console.log(`You are now fighting ${mob.name} \nHealth = ${mob.health} \nAttack = ${mob.attack}`);
 
   if(mob.health < 0 && mob.name === "badgay"){
     console.log(`congrats! you defeated ${mob.name}`)
