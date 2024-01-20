@@ -40,9 +40,9 @@ async function gameLoop() {
     const mobAttack = mob.attack;
     console.log(`${mob.name} STATS\nHEALTH = ${mob.health}\nDamage = ${mobAttack}`)
     
-    if((mob.health < 0) && (mob.name === "badgay")){
+    if((mob.health < 0) && (mob.name === "BADGUY")){
       console.log(`YAY! you defeated ${mob.name}`)
-      mob.slice()
+      mobs.slice()
       console.log(`You are now fighting ${mob.name}`);
     }
     
