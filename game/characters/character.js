@@ -55,10 +55,11 @@ class Character {
       const spell = this.spells[i];
       if(spellName === spell.name) {
         return this.defense += spell.power
-      }
+      };
+      
       // if no match return 0
       if(!spell) {
-        return 0;
+        console.log("No matching spell was found");
       } 
       else if(this.activePet) {
         const petAttack = this.activePet.attack;

@@ -2,7 +2,7 @@ const Spell = require('./spell');
 
 class Lag extends Spell {
   constructor(name) {
-    super(name, 1, 2)
+    super(name, 50, 2)
   }
 }
 

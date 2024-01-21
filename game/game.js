@@ -24,27 +24,31 @@ async function gameLoop() {
     break;
     default: console.log(`PLEASE CHOOSE A VALID CHARACTER(must be lower case). \nGame Over. \nPress 'control' + 'D' to exit the game.`);
   }
-  console.log("character", character)
+  // console.log("character", character)
   console.log(`You have selected ((( ${character.name} ))) \nHealth = ${character.health}\nStrength = ${character.getDamage()}\nLevel = ${character.level}`);
   console.log(`You are now fighting <<< ${mob.name} >>>\nHealth = ${mob.health} \nAttack = ${mob.attack}`);
 
   
   while((character.health > 0) && (mob.health > 0)) {
+    // Character stuff
     console.log(`((( ${character.name} SPELLS )))`)
     console.log(character.spells)
     const move = await prompt(`${character.name}!!!\nCast a spell to begin the game\n`)
-    
     const damage = character.getDamage(move);
-    console.log(`${character.name} STATS\nHEALTH = ${character.health}\nDAMAGE = ${damage}`)
+    console.log(`\n${character.name} STATS`)
+    console.log("DAMAGE = ", character.attack);
+    console.log("HEALTH = ", character.health);
     
+    // Mob stuff
     mob.health -= damage;
-    const mobAttack = mob.attack;
-    console.log(`${mob.name} STATS\nHEALTH = ${mob.health}\nDamage = ${mobAttack}`)
+    console.log(`\n${mob.name} STATS`);
+    console.log("ATTACK = ", mob.attack);
+    console.log("HEALTH = ", mob.health);
     
     if((mob.health < 0) && (mob.name === "BADGUY")){
-      console.log(`YAY! you defeated ${mob.name}`)
-      mobs.slice()
-      console.log(`You are now fighting ${mob.name}`);
+      console.log(`\nYAY! you defeated ${mob.name}`)
+      mob = mobs[1];
+      console.log(`\nYou are now fighting <<< ${mob.name} >>>`);
     }
     
   }
