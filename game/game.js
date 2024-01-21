@@ -24,6 +24,7 @@ async function gameLoop() {
     break;
     default: console.log(`PLEASE CHOOSE A VALID CHARACTER(must be lower case). \nGame Over. \nPress 'control' + 'D' to exit the game.`);
   }
+  console.log("character", character)
   console.log(`You have selected ((( ${character.name} ))) \nHealth = ${character.health}\nStrength = ${character.getDamage()}\nLevel = ${character.level}`);
   console.log(`You are now fighting <<< ${mob.name} >>>\nHealth = ${mob.health} \nAttack = ${mob.attack}`);
 
@@ -48,7 +49,7 @@ async function gameLoop() {
     
   }
   const gameOver = "GAME OVER";
-  console.log(`${gameOver}\npress ctrl+d to exit`)
+  console.log(`${gameOver}\nctrl+d to exit`)
   return;
 }
 gameLoop();
