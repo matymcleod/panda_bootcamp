@@ -5,7 +5,7 @@ const Pet = require("./pet");
 
 class Mage extends Character {
   constructor(name) {
-    super(name, "mage", 50, 4, 6,  100, 10);
+    super(name, "mage", 50, 4, 6, 100);
     this.pets = [];
     
     const dusty = new Pet("dusty", 10);

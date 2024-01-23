@@ -1,8 +1,8 @@
 class Mob {
-  constructor(name, attack, health) {
+  constructor(name, attack) {
     this.name = name;
     this.attack = attack;
-    this.health = health;
+    this.health = 100;
   }
 }
 

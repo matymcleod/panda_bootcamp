@@ -25,22 +25,24 @@ async function gameLoop() {
     default: console.log(`PLEASE CHOOSE A VALID CHARACTER(must be lower case). \nGame Over. \nPress 'control' + 'D' to exit the game.`);
   }
   // console.log("character", character)
-  console.log(`You have selected ((( ${character.name} ))) \nHealth = ${character.health}\nStrength = ${character.getDamage()}\nLevel = ${character.level}`);
+  console.log(`You have selected ((( ${character.name} ))) \nHealth = ${character.health}\nStrength = ${character.getDamage("lag")}\nLevel = ${character.level}`);
   console.log(`You are now fighting <<< ${mob.name} >>>\nHealth = ${mob.health} \nAttack = ${mob.attack}`);
 
   
   while((character.health > 0) && (mob.health > 0)) {
-    // Character stuff
+    // Character
     console.log(`((( ${character.name} SPELLS )))`)
     console.log(character.spells)
     const move = await prompt(`${character.name}!!!\nCast a spell to begin the game\n`)
+    // Need to find a way to handle mob health stat when no input is entered in this prompt
     const damage = character.getDamage(move);
+    console.log("damage -->", damage);
     console.log(`\n${character.name} STATS`)
     console.log("DAMAGE = ", character.attack);
     console.log("HEALTH = ", character.health);
     
-    // Mob stuff
-    mob.health -= damage;
+    // Mob
+    mob.health = mob.health - damage;
     console.log(`\n${mob.name} STATS`);
     console.log("ATTACK = ", mob.attack);
     console.log("HEALTH = ", mob.health);
