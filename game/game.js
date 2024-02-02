@@ -34,18 +34,19 @@ async function gameLoop() {
     console.log(`((( ${character.name} SPELLS )))`)
     console.log(character.spells)
     const move = await prompt(`${character.name}!!!\nCast a spell to begin the game\n`)
+    
     // Need to find a way to handle mob health stat when no input is entered in this prompt
     const damage = character.getDamage(move);
     console.log("damage -->", damage);
     console.log(`\n${character.name} STATS`)
     console.log("DAMAGE = ", character.attack);
-    console.log("HEALTH = ", character.health);
+    console.log("CHARACTER HEALTH = ", character.health);
     
     // Mob
     mob.health = mob.health - damage;
     console.log(`\n${mob.name} STATS`);
     console.log("ATTACK = ", mob.attack);
-    console.log("HEALTH = ", mob.health);
+    console.log(mob.health);
     
     if((mob.health < 0) && (mob.name === "BADGUY")){
       console.log(`\nYAY! you defeated ${mob.name}`)
