@@ -1,51 +1,20 @@
-Day 6
-1) Create a new folder called game. (remember to cd into it if youre not in it in your terminal, to run node!)
-2) Create a mage.js. Create a Mage class, with a constructor that takes a name. Set this.name to name in the constructor. Export the class from the file.
-3) Create a game.js Import the Mage class using require, and create a new Mage with whatever name you want. Log it to the console.
-4) Do the same thing for 7 classes total: Warrior, Shaman, Warlock, Paladin, Mage, Gambler, and Medic. making sure your game.js uses all 7 files to create one (or more!) of each class.
-5) Create a pet.js file. Create a Pet class, with a constructor that types one parameter, name. Export Pet from the file.
-6) in Warlock and then Shaman, import the Pet class, and in the constructor function, set this.pets to an empty array. Then, create a new Pet, then push it to the array. These classes start with a pet when they are made! 
-Next lesson is Sunday, was going to do tomorrow but this gives some people time to catch up too and practice previous for loops and shit
-
-
-Day 7 Homework:
-1) ~Delete all but 3 of your character classes - you pick which 3 you want to keep! Update game.js accordinly, to remove your deleted characters~
-2) ~Restructure your game. Your game should have a characters folder where your characters reside.~ 
-3) ~Implement a base Character class that takes the following constructor arguments: name, className, attack, magic, defense, speed, health, mana, and sets them on the character.~
-4) ~The character initializer should also initialize an empty array of weapons, pets, and spells.~
-
-5) ~The 3 classes you use should now inherit from the Character class, usign the class {className} extends Character syntax.~
-
-6) ~Create a spells folder, and a Spell class, with a constructor that takes the following arguments: name, power, mana, and sets them on the spell.~
-
-7) ~Create a specific spell in a separate file: ie: fireball.js, and export that spell from the file.~
-
-8) ~In one of your characters, give them the spell in the constructor.~
-
-9) ~Do steps 6 through 8 for weapons.~
-
-10) ~Implement a levelUp function in the Character class that bumps up the characters level, and then stats depending on which character class is being levelled up.~
-
-11) Implement a getDamage function in the Character class according to the following spec:
-- ~If a character has an activePet, we take the activePet's damage as starting value, and add it to the character's magic damage.~
-- ~If a character is casting a spell, we take the spell's damage and add it to the character's magic damage.~
-- ~If a character has neither an activePet, nor a spell, we take their weapon's damage (if they have an equipped one, if not, use 0), and add it to the character's attack damage.~
-
-Day 8 Homework
-1) ~Create a mobs folder, mobs class, and some mobs, as well as a mobs array that stores all your mobs.~
-
-2) ~run npm init to initialize your repository, and npm install --save prompt-promise to install the prompt package.~
-
-3) ~in game.js, you can require the prompt-promise package the same way you require local stuff! const prompt = require("prompt-promise")~
 
 4) Create a fun game loop! The world is your oyster.
 BARE MINIMUM:
 - ~Choose a class, instantiate your character based on that class. Throw an error if that class is not available.~
+  - 1st prompt: choose a character(new character class gets created)
+
 - Select random mobs to fight, in a "turn based" fighting system.
+  - 2nd prompt: choose which mob to fight(selectable via number)
+  - 
 - Offer the ability to attack, equip weapon, summon pet, or cast a spell each turn.
+  - 3rd prompt: choose what to fight with or defend (selectible via number)
+  - Character then gets hit by selected mob
+
+
 - Level up after a mob is defeated, or game over if you are defeated.
+  - Need to keep track of each mobs health(if badguy.health && buttface.health && dudaroo.health <= 0)
+  - Once all mobs health is equal to or less than zero
+
 - IF you defeat all mobs, you win!
 
-5) Push your updated game to your git repo!
-
-6) Get someone else to clone you repo and try your game!

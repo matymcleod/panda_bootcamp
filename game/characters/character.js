@@ -49,16 +49,16 @@ class Character {
   }
   
   getDamage(spellName){
-    // checking if there is a matching spellName this characters spells array
     for(let i = 0; i < this.spells.length; i++) {
-      // if there is a spell in the spells array that matches what was passed in, set the spell to be saved as the matching arg.
       const spell = this.spells[i];
       if(spellName === spell.name) {
+        // checking if there is a matching spellName this characters spells array
         if(!spell) return 0;
+        // if no match return 0
         return this.defense += spell.power
+        // if there is a spell in the spells array that matches what was passed in, set the spell to be saved as the matching arg.
       };
 
-      // if no match return 0
       if(this.activePet) {
         const petAttack = this.activePet.attack;
         return this.attack += petAttack;
