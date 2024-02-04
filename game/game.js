@@ -73,23 +73,25 @@ async function gameLoop() {
     console.log(`${character.name} HEALTH = ${character.health}`);
 
     // Mob
-    mob.health = mob.health - damage;
+    mob.health -= damage;
     console.log(`${mob.name} HEALTH = ${mob.health}`);
     
     if(mob.health < 0){
       console.log(`\nYAY! you defeated ${mob.name}`)
-      mobs.pop()
+      // need an array method to place the current mob at the begining of the mobs array 
+      // mobs.shift() // shift removes the first element of an array and changes the length of the array
     }
-
-    console.log(mobs);
+    const livingMobs = [];
+    for(let i = 0; i < mobs.length; i++) {
+      if(mobs[i].health > 0){
+        
+      }
+    }
     const nextMob = await prompt("Please choose the next mob to fight")
     // if all mobs have been beaten/removed from the mobs array, you win the game
-    if(mobs.length < 1) {
+    if(.length < 1) {
       return "Game Over, You Won!"
     }
   }
-  const gameOver = "GAME OVER";
-  console.log(`${gameOver}\nctrl+d to exit`)
-  return;
 }
 gameLoop();
