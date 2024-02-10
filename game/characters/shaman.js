@@ -8,7 +8,8 @@ class Shaman extends Character{
     super(name, "shaman", 1, 2, 3, 100, 6);
     this.name = name;
     this.pets = [];
-    // shaman defaults with: pet, spell and weapon
+    
+    // Default loadout
     const sophie = new Pet("sophie", 5);
     this.pets.push(sophie);
 
