@@ -3,7 +3,7 @@ const mobs = require("./mobs/mobs");
 const Shaman = require("./characters/shaman");
 const Warlock = require("./characters/warlock");
 const Mage = require("./characters/mage");
-// test test test
+
 async function gameLoop() {
   // Default players
   let character;
