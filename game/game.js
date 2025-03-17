@@ -123,7 +123,7 @@ async function gameLoop() {
         console.log(`You are now fighting the final Mob boss ${mob}, good luck!`)
         continue;
       }
-      }
+    }
   }
 }
 gameLoop();
