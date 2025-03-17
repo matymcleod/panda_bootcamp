@@ -11,8 +11,7 @@ async function gameLoop() {
   let mob = mobs[0];
 
   // This is the first promt of the game that allows users to see which characters they can use to get the game started
-  const classChoice = await prompt("Select a character:\n 1 = MAGE\n 2 = SHAMAN\n 3 = WARLOCK\n")
-  
+  const classChoice = await prompt("Select a character:\n 1 = MAGE\n 2 = SHAMAN\n 3 = WARLOCK\n Press \'ctrl + c\' to end the game\n")
 
   // This switch allows users to create a new character based on which case number is input by the user.
   switch(classChoice) { 
@@ -27,6 +26,7 @@ async function gameLoop() {
       break;
     default: 
       console.log(`${errorHandling.classChoiceError}`);
+      classChoice;
   }
   
   // Once a charcter has been created, a message is displayed with the charcaters basic stats
