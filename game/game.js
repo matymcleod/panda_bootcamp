@@ -11,7 +11,7 @@ async function gameLoop() {
   let mob = mobs[0];
 
   // This is the first promt of the game that allows users to see which characters they can use to get the game started
-  const classChoice = await prompt("Select a character:\n 1 = MAGE\n 2 = SHAMAN\n 3 = WARLOCK\n Press \'ctrl + c\' to end the game\n")
+  const classChoice = await prompt("SELECT CHARACTER:\n 1 = MAGE\n 2 = SHAMAN\n 3 = WARLOCK\n END GAME: CTRL + C\n")
 
   // This switch allows users to create a new character based on which case number is input by the user.
   switch(classChoice) { 
@@ -30,13 +30,13 @@ async function gameLoop() {
   }
   
   // Once a charcter has been created, a message is displayed with the charcaters basic stats
-  console.log(`You have selected ((( ${character.name} ))) \nHealth = ${character.health}\nLevel = ${character.level}`);
+  console.log(`${character.name}\nHealth ${character.health}\nLevel ${character.level}`);
   
   // This is a prompt that waits for the user to select a mob to fight
-  const mobChoice = await prompt(`Select a Mob to fight:\n 1 = ${mobs[0].name}\n 2 = ${mobs[1].name}\n 3 = ${mobs[2].name}\n`)
+  const mobChoice = await prompt(`SELECT MOB:\n 1 = ${mobs[0].name}\n 2 = ${mobs[1].name}\n 3 = ${mobs[2].name}\n`)
 
   // Used if user selects a mob that is not valid 
-  const mobChoiceErr = "Please choose a valid Mob yo";
+  const mobChoiceErr = "INVALID CHOICE";
 
   // This switch allows users to select a mob based on whichever case number is input by the user
   switch(mobChoice) {
@@ -52,7 +52,7 @@ async function gameLoop() {
     default: 
       console.log(`${mobChoiceErr}`)
   }
-  console.log("You are now fighting <<< " + mob.name + " >>>\n Health = " + mob.health + "\n Attack = " + mob.attack);
+  console.log("You are now fighting" + mob.name + "\n Health = " + mob.health + "\n Attack = " + mob.attack);
   
   // The main loop that controls the flow of the game. Once all 3 mobs health is below zero, you win! If your characters health goes below zero, say bye bye charcter. Game Over for you :(
   while((character.health > 0) && (mob.health > 0)) {
