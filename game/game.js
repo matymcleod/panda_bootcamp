@@ -30,7 +30,7 @@ async function gameLoop() {
   }
   
   // Once a charcter has been created, a message is displayed with the charcaters basic stats
-  console.log(`${character.name}\nHealth ${character.health}\nLevel ${character.level}`);
+  console.log(`${character.name}\nHEALTH ${character.health}\nLEVEL ${character.level}`);
   
   // This is a prompt that waits for the user to select a mob to fight
   const mobChoice = await prompt(`SELECT MOB:\n 1 = ${mobs[0].name}\n 2 = ${mobs[1].name}\n 3 = ${mobs[2].name}\n`)
@@ -52,7 +52,9 @@ async function gameLoop() {
     default: 
       console.log(`${mobChoiceErr}`)
   }
-  console.log("You are now fighting" + mob.name + "\n Health = " + mob.health + "\n Attack = " + mob.attack);
+  console.log(`ITS ${classChoice} VS ${mobChoice} !!!`)
+  console.log(`${classChoice} LEVEL ${character.level} HEALTH ${character.health}`);
+  console.log(`${mobChoice} HEALTH ${mobChoice} ATTACK ${mob.attack}`)
   
   // The main loop that controls the flow of the game. Once all 3 mobs health is below zero, you win! If your characters health goes below zero, say bye bye charcter. Game Over for you :(
   while((character.health > 0) && (mob.health > 0)) {
