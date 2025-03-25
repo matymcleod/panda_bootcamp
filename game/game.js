@@ -11,7 +11,7 @@ async function gameLoop() {
   let mob = mobs[0];
 
   // This is the first promt of the game that allows users to see which characters they can use to get the game started
-  const classChoice = await prompt("SELECT CHARACTER:\n 1 = MAGE\n 2 = SHAMAN\n 3 = WARLOCK\n END GAME: CTRL + C\n")
+  const classChoice = await prompt("SELECT CHARACTER:\n 1 MAGE\n 2 SHAMAN\n 3 WARLOCK\nEND GAME CTRL + C\n")
 
   // This switch allows users to create a new character based on which case number is input by the user.
   switch(classChoice) { 
@@ -30,13 +30,10 @@ async function gameLoop() {
   }
   
   // Once a charcter has been created, a message is displayed with the charcaters basic stats
-  console.log(`${character.name}\nHEALTH ${character.health}\nLEVEL ${character.level}`);
+  // console.log(`${character.name}\nHEALTH ${character.health}\nLEVEL ${character.level}`);
   
   // This is a prompt that waits for the user to select a mob to fight
-  const mobChoice = await prompt(`SELECT MOB:\n 1 = ${mobs[0].name}\n 2 = ${mobs[1].name}\n 3 = ${mobs[2].name}\n`)
-
-  // Used if user selects a mob that is not valid 
-  const mobChoiceErr = "INVALID CHOICE";
+  const mobChoice = await prompt(`SELECT MOB:\n 1 ${mobs[0].name}\n 2 ${mobs[1].name}\n 3 ${mobs[2].name}\nEND GAME CTRL + C\n`)
 
   // This switch allows users to select a mob based on whichever case number is input by the user
   switch(mobChoice) {
@@ -50,36 +47,43 @@ async function gameLoop() {
       mob = mobs[2];
       break;
     default: 
-      console.log(`${mobChoiceErr}`)
+      console.log(`${errorHandling.mobChoiceErr}`)
   }
-  console.log(`ITS ${classChoice} VS ${mobChoice} !!!`)
-  console.log(`${classChoice} LEVEL ${character.level} HEALTH ${character.health}`);
-  console.log(`${mobChoice} HEALTH ${mobChoice} ATTACK ${mob.attack}`)
+  console.log(`ITS ${character.name} VS ${mob.name} !!!\n`)
+  console.log(`${character.name} STATS \nLEVEL ${character.level}\nHEALTH ${character.health}\n`);
+  console.log(`${mob.name} STATS \nHEALTH ${mob.health}\nATTACK ${mob.attack}\n`);
   
   // The main loop that controls the flow of the game. Once all 3 mobs health is below zero, you win! If your characters health goes below zero, say bye bye charcter. Game Over for you :(
   while((character.health > 0) && (mob.health > 0)) {
     // This prompt allows users to to enter their choice of attack
-    const charAttack = await prompt(`Your move ${character.name}\n 1 = cast a spell\n 2 = use weapon\n 3 = attack with pet\n`)
+    const charAttack = await prompt(`${character.name} TURN\n 1 SPELL\n 2 WEAPON\n 3 PET\n`)
     
+
     // This switch executes the users choice of attack on the mob and displays the mobs health as a result of your attack
     switch(charAttack) {
+      
       case "1":
         console.log(character.spells);
-        const charSpell = await prompt(`You have chosen to cast a spell, which spell would you like to use?\n`);
+        const charSpell = await prompt(`CHOOSE SPELL\n`);
         const spellAttack = character.getDamage(charSpell);
         mob.health -= spellAttack;
-        console.log(`You hit ${mob.name} for ${spellAttack}\n ${mob.name} Health = ${mob.health}`)
+        console.log(`YOU ATTACK ${mob.name} FOR ${spellAttack}\n${mob.name} HEALTH = ${mob.health}`)
         break;
+
       case "2":
         console.log(character.weapons);
-        const weaponAttack = await prompt(`You have chosen to attack with a Weapon, choose your weapon\n`)
+        const weaponAttack = await prompt(`CHOOSE WEAPON\n`)
         break;
+
       case "3":
         console.log(character.pets);
-        const attackPet = await prompt(`You have chosen to attack with a Pet, choose your pet\n`)
+        const attackPet = await prompt(`CHOOSE PET\n`)
         break;
+
+
       default: 
-        console.log("You entered something invalid, please quit and restart the game")
+        console.log("INVALID ENTRY - PLEASE RESTART THE GAME")
+        console.log("CTRL + C");
     } 
       // This array is needed to hold mobs with health higher than zero 
       const livingMobs = [];
@@ -89,11 +93,11 @@ async function gameLoop() {
         
         // mob attack calculation
         character.health -= mob.attack
-        console.log(`${mob.name} hits you back for ${mob.attack}`);
-        console.log(`${character.name} Health = ${character.health}`)
+        console.log(`${mob.name} HITS YOU BACK FOR ${mob.attack}`);
+        console.log(`${character.name} HEALTH ${character.health}`)
         continue;
       } else {
-        console.log(`\nYAY! you defeated ${mob.name}`)
+        console.log(`\n((( YOU DEFEATED ${mob.name} )))`)
         // Search through each mob in the mobs array. Mobs with health greater than zero get pushed into the living mobs array
         for(let i = 0; i < mobs.length; i++) {
           let livingMob = mobs[i];
