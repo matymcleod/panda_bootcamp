@@ -26,7 +26,7 @@ async function gameLoop() {
       break;
     default: 
       console.log(`${errorHandling.classChoiceError}`);
-      classChoice;
+      return classChoice ;
   }
   
   // Once a charcter has been created, a message is displayed with the charcaters basic stats
@@ -49,7 +49,7 @@ async function gameLoop() {
     default: 
       console.log(`${errorHandling.mobChoiceErr}`)
   }
-  console.log(`ITS ${character.name} VS ${mob.name} !!!\n`)
+  console.log(`ITS ${character.name} VS ${mob.name}\n`)
   console.log(`${character.name} STATS \nLEVEL ${character.level}\nHEALTH ${character.health}\n`);
   console.log(`${mob.name} STATS \nHEALTH ${mob.health}\nATTACK ${mob.attack}\n`);
   

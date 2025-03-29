@@ -1,7 +1,7 @@
 const Character = require("./character");
 const Lag = require("../spells/lag");
 const Knife = require("../weapons/knife");
-const Pet = require("./pet");
+const Pet = require("../pets/pet");
 
 class Mage extends Character {
   constructor(name) {

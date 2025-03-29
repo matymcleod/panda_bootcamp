@@ -1,4 +1,4 @@
-const Pet = require("./pet");
+const Pet = require("../pets/pet");
 const Character = require("./character");
 const Phase = require("../spells/phase");
 const Pistol = require("../weapons/pistol");
