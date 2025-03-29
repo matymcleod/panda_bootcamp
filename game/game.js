@@ -4,14 +4,14 @@ const Shaman = require("./characters/shaman");
 const Warlock = require("./characters/warlock");
 const Mage = require("./characters/mage");
 const errorHandling = require("./Error handling/errors");
+const classChoice = require("./prompts")
 
 async function gameLoop() {
   // Default players
   let character;
   let mob = mobs[0];
+classChoice();
 
-  // This is the first promt of the game that allows users to see which characters they can use to get the game started
-  const classChoice = await prompt("SELECT CHARACTER:\n 1 MAGE\n 2 SHAMAN\n 3 WARLOCK\nEND GAME CTRL + C\n")
 
   // This switch allows users to create a new character based on which case number is input by the user.
   switch(classChoice) { 
@@ -26,7 +26,7 @@ async function gameLoop() {
       break;
     default: 
       console.log(`${errorHandling.classChoiceError}`);
-      return classChoice ;
+      return classChoice();
   }
   
   // Once a charcter has been created, a message is displayed with the charcaters basic stats
