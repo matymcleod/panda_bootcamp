@@ -1,7 +1,11 @@
-const classChoiceError = "PLEASE CHOOSE A VALID CHARACTER:\n 1 MAGE\n 2 SHAMAN\n 3 WARLOCK\nEND GAME CTRL + C\n";
+const invalidChoice = "INVALID CHOICE"
+const classChoiceError = `((( ${invalidChoice} - PLEASE CHOOSE A VALID CHARACTER )))`;
+const mobChoiceErr = `((( ${invalidChoice} - PLEASE CHOOSE A VALID MOB )))`;
+const pleaseExit = "EXIT THE GAME (CTRL + C)"
 
-// Used if user selects a mob that is not valid 
-const mobChoiceErr = "PLEASE CHOOSE A VALID MOB: ";
-  
-const pleaseExit = ""
-module.exports = {classChoiceError};
+module.exports = {
+  invalidChoice,
+  classChoiceError,
+  mobChoiceErr,
+  pleaseExit
+};
