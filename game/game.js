@@ -64,16 +64,27 @@ const classChoice = await prompt("SELECT CHARACTER:\n 1 MAGE\n 2 SHAMAN\n 3 WARL
     
     while(true) {
       const charAttack = await prompt(`WHAT WILL YOU USE TO FIGHT ${mob.name}? \n 1 SPELL\n 2 WEAPON\n 3 PET\n`)
+    
       // This switch executes the users choice of attack on the mob and displays the mobs health as a result of your attack
       switch(charAttack) {
-        
         case "1":
-          // *** Find a way to print spells numbered so they are selectable by entering numbers into the charSpell prompt
-          console.log(`CHOOSE A SPELL ${character.spells}`);
-          console.log(character.spells);
-          const charSpell = await prompt(``);
-          const spellAttack = character.getDamage(charSpell);
-          mob.health -= spellAttack;
+          // console.log(`CHOOSE A SPELL`);
+          const allSpells = character.spells; // array of spells
+          
+          allSpells.forEach((allSpells, index) => { //print each spell with a line number
+            console.log(` ${index + 1} ${allSpells.name}`);
+        });
+
+          const spellSelect = await prompt(`CHOOSE A SPELL`); // enter your choice of spell, probably needs loop to get spellName
+            const spellName = "test";
+            if(spellSelect === 1){
+              spellName = allSpells[0].name;
+          }
+         
+          const spellAttack = character.getDamage(spellName); // get spells damage number
+          
+          mob.health -= spellAttack; // subtract spell damage from mobs health
+
           console.log(`YOU ATTACK ${mob.name} FOR ${spellAttack}\n${mob.name} HEALTH = ${mob.health}`)
           break;
 
